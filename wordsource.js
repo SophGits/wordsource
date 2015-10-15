@@ -23,7 +23,7 @@ CommaSeparatedWordsource.prototype.count = function() {
 
 CommaSeparatedWordsource.prototype.topFiveWords = function() {
   var quantities = this.seenWords.reduce(function(ret, val, i){
-    if(ret[val]) {
+    if(ret.hasOwnProperty(val)) {
       ret[val] += 1;
     } else {
       ret[val] = 1;
